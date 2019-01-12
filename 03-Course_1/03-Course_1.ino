@@ -1,10 +1,10 @@
 #include <ESP8266WiFi.h>        // Include the Wi-Fi library
 
-const char* ssid     = "ORANGE_D34C";         // The SSID (name) of the Wi-Fi network you want to connect to
-const char* password = "RNJPDJUT";     // The password of the Wi-Fi network
+const char* ssid     = "********";         // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password = "********";     // The password of the Wi-Fi network
 
 void setup() {
-  Serial.begin(74880);         // Start the Serial communication to send messages to the computer
+  Serial.begin(115200);         // Start the Serial communication to send messages to the computer
   delay(10);
   Serial.println('\n');
   

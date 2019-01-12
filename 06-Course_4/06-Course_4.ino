@@ -1,15 +1,18 @@
 #include <ESP8266WiFi.h>
 
+const char* ssid     = "********";         // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password = "********";     // The password of the Wi-Fi network
+
 WiFiServer server(80);
 String  mClientRequest;
 
 void setup() {
   // put your setup code here, to run once:
   mClientRequest = "";
-  Serial.begin(9600);
+  Serial.begin(115200);
   
   Serial.println("START");
-   WiFi.begin("ORANGE_D34C","RNJPDJUT");
+   WiFi.begin(ssid,password);
   while ((!(WiFi.status() == WL_CONNECTED))){
     delay(300);
     Serial.print("..");
@@ -43,6 +46,7 @@ void loop() {
 	
   	
   	String html ="<!doctype html><html><head><title>HTML Editor - Full Version</title></head>\r\n<body><h1 style=\"text-align: center;\">HTML Editor - Full Version</h1><p style=\"text-align: center;\">It&#39;s good to see you again.</p><p style=\"text-align: center;\"><a href=\"LEDON\"><input name=\"On Button\" type=\"button\" value=\"LED ON\" /></a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href=\"LEDOFF\"><input name=\"Off Button\" type=\"button\" value=\"LED OFF\" /></a></p></body></html>";
+	
   	client.println("HTTP/1.1 200 OK");
     client.println("Content-Type: text/html");
     client.println("");

@@ -1,15 +1,18 @@
 #include <ESP8266WiFi.h>
 
+const char* ssid     = "********";         // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password = "********";     // The password of the Wi-Fi network
+
 WiFiServer server(80);
 String  mClientRequest;
 
 void setup() {
   // put your setup code here, to run once:
   mClientRequest = "";
-  Serial.begin(9600);
+  Serial.begin(115200);
   
   Serial.println("START");
-   WiFi.begin("ORANGE_D34C","RNJPDJUT");
+   WiFi.begin(ssid,password);
   while ((!(WiFi.status() == WL_CONNECTED))){
     delay(300);
     Serial.print("..");
