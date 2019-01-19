@@ -5,6 +5,6 @@
 #define SECRET_PASS "xxx"	// replace MyPassword with your WiFi password
 
 
-#define SECRET_CH_ID 671752 					//Test channel for counting
+#define SECRET_CH_ID 671752 					//Your channel ID
 #define SECRET_READ_APIKEY "xxx"	//API Key for Test channel
 #define SECRET_WRITE_APIKEY "xxx"   // replace XYZ with your channel write API Key

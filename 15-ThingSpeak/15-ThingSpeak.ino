@@ -80,9 +80,9 @@ void loop() {
 //  delay(15000); // No need to read the counter too often.
 
 
-//================//Sensor feed=====================
+//================Sensor feed=====================
 
-  int x = ThingSpeak.writeField(channelNumber, 3, "hello" , myWriteAPIKey);
+  int x = ThingSpeak.writeField(channelNumber, 2 , number , myWriteAPIKey);
   if(x == 200){
     Serial.println("Channel update successful.");
   }
@@ -96,6 +96,6 @@ void loop() {
     number = 0;
   }
   
-  delay(15000); // Wait 20 seconds to update the channel again
+  delay(15000); // Wait 15 seconds to update the channel again
   
 }
